@@ -25,7 +25,7 @@ function getStyle(obj,attribute){
 }
 // 浏览器左边边框显示与隐藏
 function slideLeft(juli){
-	var obj=document.getElementById("box");
+	var obj=$("box");
 	clearInterval(timer);
 	timer=setInterval(function(){
 		obj.offsetLeft==juli?clearInterval(timer):obj.style.left=obj.offsetLeft+(juli>=0?2:-2)+"px";
@@ -96,7 +96,6 @@ function eventObj(event){
 	}
 	/**
 		* 解决事件冒泡
-		* <1>.教学视屏中传入了event,我自己写的没有,也可以......
 	*/
 	function stopBubble(){
 		window.event.cancelBubble?window.event.cancelBubble=true:event.stopPropagation();
