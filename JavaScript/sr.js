@@ -25,10 +25,9 @@ function getStyle(obj,attribute){
 }
 // 浏览器左边边框显示与隐藏
 function slideLeft(juli){
-	var obj=$("box");
 	clearInterval(timer);
 	timer=setInterval(function(){
-		obj.offsetLeft==juli?clearInterval(timer):obj.style.left=obj.offsetLeft+(juli>=0?2:-2)+"px";
+		$("box").offsetLeft==juli?clearInterval(timer):$("box").style.left=$("box").offsetLeft+(juli>=0?2:-2)+"px";
 	},2);
 }
 // 匀速淡入淡出
