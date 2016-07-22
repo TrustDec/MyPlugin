@@ -106,3 +106,26 @@ function eventObj(event){
 	function stopDefaultEvent(){
 		window.event.returnValue?window.event.returnValue=false:event.preventDefault();
 	}
+/*
+      --------------------------- 工具类20160722-------------------------------------
+*/
+        function strSplit(num,defined){
+		var result="";
+		var str=num.toString();
+		var width=str.length;
+		var arr=new Array();
+		return width===6?(function(){
+			for (var i = 0; i < width; i++) {		
+				if (i%2==0&&i!=0) {
+					arr.push(defined);
+				};
+				arr.push(str[i]);			
+			};
+			for(var p in arr){
+				result+=arr[p];
+			}
+			return result;
+		})():(function(){
+			return num;
+		})();
+	}	
