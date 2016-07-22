@@ -50,11 +50,9 @@ function getClassName(oParent,oClass){
 	return claName;
 }
 // 页面动态滚动指定的位置
-// element:事件触发,position:指定位置
-function scrollTop(element,position){
-	element.onclick=function(){
-		alert("待完成..........................................");
-	}
+// element:事件触发对象,position:指定位置
+function scrollTop(){
+	
 }
 // Dom节点获取元素方法封装,及解决浏览器兼容问题
 // 获取第一个子元素
@@ -109,6 +107,10 @@ function eventObj(event){
 /*
       --------------------------- 工具类20160722-------------------------------------
 */
+	/*num:要分割的值,支持6位,
+	defined:自定义字符
+	值长度不等于6位数字将返回原数
+	*/
         function strSplit(num,defined){
 		var result="";
 		var str=num.toString();
