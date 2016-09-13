@@ -1,3 +1,6 @@
 ##MyPlugin
-JavaScript常用方法封装
-博客地址:http://www.cnblogs.com/smallrui/
+[SmallRui](http://www.cnblogs.com/smallrui/)
+JavaScript工具封装
+Css案例Demo
+引导页Demo
+[点击进入博客][SmallRui]
