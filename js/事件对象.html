@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name="" id="text">
+	<script src="js/sr.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			$("text").onkeydown=function(){
+				var Event=eventObj();
+				alert(Event.keyCode);
+			};
+		
+			/*$("text").onkeydown=function(event){
+				if (window.event) {
+					var code=window.event.keyCode;
+				}else{
+					var code=event.keyCode;
+				}
+				switch(code){
+					case 37:
+						alert("左");
+						break;
+					case 38:
+						alert("上");
+						break;
+					case 39:
+						alert("右");
+						break;
+					case 40:
+						alert("下");
+				}
+			}*/
+		}
+	</script>

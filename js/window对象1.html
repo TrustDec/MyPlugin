@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input type="text" name="" id="t">
+<input type="button" value="开始" onclick="l()">
+<input type="button" value="结束" onclick="stopTime()">
+<script src="js/sr.js"></script>
+	<script>
+		//setTimeout("alert(1);alert(2)",1000);
+		//setInterval("alert(1);alert(2)",1000);
+		var time;
+		function l(){
+			var dt=new Date();
+			var str=dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
+			$("t").value=str;
+			time=setTimeout("l()",1000);
+		}
+		function stopTime(){
+			clearTimeout(time);
+		}
+	</script>
+</body>
+</html>

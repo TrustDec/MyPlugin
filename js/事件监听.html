@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{width:110px;height:100px;}
+		#div{background:red;}
+		#div1{background:#188eee;}
+	</style>
+</head>
+<body>
+<div id="div"></div>
+<div id="div1"></div>
+<input type="button" value="删除事件" id="btn">
+	<script src="js/sr.js"></script>
+	<script type="text/javascript">
+		addEvent($("div"),"click",f1);
+		addEvent($("btn"),"click",function(){
+			removeEvent($("div"),"click",f1);
+		});
+		function f1(){
+			if($("div1").style.backgroundColor=="green"){
+				$("div1").style.backgroundColor="#1188ee"
+			}else{
+				$("div1").style.backgroundColor="green";
+			}
+		}
+	</script>

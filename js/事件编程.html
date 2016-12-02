@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" >
+		#div1{width:500px;height:500px;background:#111;}
+		#div2{width:300px;height:300px;background:#ddd;}
+		#div3{width:200px;height:200px;background:#a3d5f5;}
+	</style>
+</head>
+<body>
+	<div id="div1"><div id="div2"><div id="div3"></div></div></div>
+	
+	<form action="m.php" method="post">
+		<input type="text" name="" id="text">
+		<input type="password" name="" id="">
+		<input type="submit" value="login" id="submit">
+	</form>
+<script src="js/sr.js"></script>
+<script type="text/javascript">
+	addEvent($("div1"),"click",function(){
+		alert("div1");
+		stopBubble();
+	});
+	addEvent($("div2"),"click",function(){
+		alert("div2");
+		stopBubble();
+	});
+	addEvent($("div3"),"click",function(){
+		alert("div3");
+		stopBubble();
+	});
+	addEvent($("submit"),"click",function(){
+		if ($("text").value=="") {
+			//IE 
+			//window.event.returnValue=false;
+			// W3C	
+			stopDefaultEvent();
+		}
+	});
+</script>
